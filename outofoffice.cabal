@@ -1,14 +1,13 @@
 name:                outofoffice
 version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/githubuser/outofoffice#readme
+description:         A small utility for generating outofoffice messages when I'm on leave
+homepage:            https://github.com/bactroid/haskell-outofoffice#readme
 license:             GPL-3
 license-file:        LICENSE
 author:              Kate Haskell
 maintainer:          fuzzcat@bactroid.net
 copyright:           2018 Kate Haskell
-category:            Web
+category:            Text
 build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md
