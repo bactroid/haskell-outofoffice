@@ -15,7 +15,6 @@ type DateDict = [(Key, VerboseDate)]
 data DateRange = DateRange { start :: Maybe Day, end :: Maybe Day }
   deriving (Eq, Show)
 
-
 msgSingle :: T.Text
 msgSingle
   = "I will be out of the office on $start.\n\nFor immediate assistance, please reach out the UF Computing Help Desk at 352-392-4357. Their service desk will create a support ticket and will get in touch with UFIT personnel who can assist you in my absence."
