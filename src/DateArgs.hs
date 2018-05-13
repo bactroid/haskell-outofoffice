@@ -7,6 +7,7 @@ import qualified Data.Text          as T
 import qualified Data.Text.Lazy     as TL
 import           Data.Text.Template
 import           Data.Time
+import           Data.Monoid
 
 type Key = T.Text
 type VerboseDate = T.Text
@@ -35,7 +36,7 @@ getDayOfWeek :: String -> Maybe DayOfWeek
 getDayOfWeek dt = dayOfWeek <$> parseDt dt
 
 getVerboseDate :: Day -> VerboseDate
-getVerboseDate d = dayOfWeekText `mappend` ", " `mappend` formattedTime
+getVerboseDate d = dayOfWeekText <> ", " <> formattedTime
  where
   dayOfWeekText = T.pack . show . dayOfWeek $ d
   formattedTime = T.pack . formatTime defaultTimeLocale "%B %-d" $ d
